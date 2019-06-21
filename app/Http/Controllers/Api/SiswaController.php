@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\Siswa;
+use Dotenv\Regex\Success;
 
 class SiswaController extends Controller
 {
@@ -52,8 +53,39 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 1. tampung semua inputan ke $input
+        $input = $request->all();
+
+        // 2. buat validasi ditampung ke $validator
+        $validator = Validator::make($input, [
+            'nama' => 'required|min:10'
+        ]);
+
+        // 3. chek validasi
+        if ($validator->fails()) {
+            $response = [
+                'success' => false,
+                'data' => 'validation error.',
+                'message' => $validator->errors()
+            ];
+            return response()->json($response, 500);
+        }
+
+        // 4. buat fungsi untuk menhandle semua inputan -> dimasukan ke table
+        $siswa = Siswa::create($input);
+
+        // 5. menampilkan response
+        $response = [
+            'Success' => true,
+            'data' => $siswa,
+            'message' => 'siswa berhasil ditambahkan.'
+        ];
+
+        // 6. tampilkan hasil
+        return response()->json($response, 200);
     }
+
+
 
     /**
      * Display the specified resource.
