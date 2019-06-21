@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\User;
 use App\Siswa;
@@ -35,22 +36,6 @@ class SiswaController extends Controller
         return response()->json($response, 200);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         // 1. tampung semua inputan ke $input
@@ -76,7 +61,7 @@ class SiswaController extends Controller
 
         // 5. menampilkan response
         $response = [
-            'Success' => true,
+            'success' => true,
             'data' => $siswa,
             'message' => 'siswa berhasil ditambahkan.'
         ];
