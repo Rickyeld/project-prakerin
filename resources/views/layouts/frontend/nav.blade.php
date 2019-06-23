@@ -37,7 +37,7 @@
                                             <li><a href="{{url('about')}}">About Us</a></li>
                                             <li><a href="{{url('contact')}}">Contact</a></li>
                                             <li><a href="{{url('submit-video')}}">Submit Video</a></li>
-                                            <li><a href="{{url('login')}}">Login</a></li>
+                                            <li><a href="{{url('log')}}">Login</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Mega</a>
@@ -48,7 +48,7 @@
                                                 <li><a href="{{url('single-post')}}">Single Post</a></li>
                                                 <li><a href="{{url('about')}}">About Us</a></li>
                                                 <li><a href="{{url('contact')}}">Contact</a></li>
-                                                <li><a href="{{url('login')}}">Login</a></li>
+                                                <li><a href="{{url('log')}}">Login</a></li>
                                             </ul>
                                     </li>
                                     <li><a href="{{url('about')}}">About</a></li>
@@ -67,7 +67,7 @@
                                 </form>
                             </div>
                             <!-- Login -->
-                            <a href="{{url('login')}}" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <a href="{{url('log')}}" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
                             <!-- Submit Video -->
                             <a href="{{url('submit-video')}}" class="submit-video"><span><i class="fa fa-cloud-upload"></i></span> <span class="video-text">Submit Video</span></a>
                         </div>
