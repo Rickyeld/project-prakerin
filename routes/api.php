@@ -19,6 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('siswa', 'Api\SiswaController');
 Route::get('most', 'FrontendController@most');
 Route::get('trending', 'FrontendController@trending');
+Route::get('kategori', 'FrontendController@kategori');
+Route::get('tag', 'FrontendController@tag');
 
 Route::group(['prefix' => 'admin'], function () { });
 

@@ -49,9 +49,37 @@ class FrontendController extends Controller
 
     public function trending()
     {
-        $artikel = Artikel::take(1)->get();
+        $artikel = Artikel::take(3)->get();
         $tag = Tag::all();
         $kategori = Kategori::all();
+
+        $response = [
+            'Success' => true,
+            'data' => ['artikel' => $artikel, 'tag' => $tag, 'kategori' => $kategori],
+            'message' => 'Artikel berhasil ditemukan'
+        ];
+        return response()->json($response, 200);
+    }
+
+    public function kategori()
+    {
+        $kategori = Kategori::take(3)->get();
+        $tag = Tag::all();
+        $artikel = Artikel::all();
+
+        $response = [
+            'Success' => true,
+            'data' => ['artikel' => $artikel, 'tag' => $tag, 'kategori' => $kategori],
+            'message' => 'Artikel berhasil ditemukan'
+        ];
+        return response()->json($response, 200);
+    }
+
+    public function tag()
+    {
+        $kategori = Tag::take(3)->get();
+        $tag = Kategori::all();
+        $artikel = Artikel::all();
 
         $response = [
             'Success' => true,

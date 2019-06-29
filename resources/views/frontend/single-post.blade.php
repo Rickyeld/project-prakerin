@@ -290,22 +290,14 @@
                         </div>
 
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
+                        <div class="single-sidebar-widget p-30 katgor">
                             <!-- Section Title -->
                             <div class="section-heading">
                                 <h5>Categories</h5>
                             </div>
 
                             <!-- Catagory Widget -->
-                            <ul class="catagory-widgets">
-                                <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Life Style</span> <span>35</span></a></li>
-                                <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Travel</span> <span>30</span></a></li>
-                                <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Foods</span> <span>13</span></a></li>
-                                <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Game</span> <span>06</span></a></li>
-                                <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sports</span> <span>28</span></a></li>
-                                <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Football</span> <span>08</span></a></li>
-                                <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> TV Show</span> <span>13</span></a></li>
-                            </ul>
+
                         </div>
 
                         <!-- Sidebar Widget -->
@@ -314,66 +306,15 @@
                         </div>
 
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
+                        <div class="single-sidebar-widget p-30 tag-artikel">
                             <!-- Section Title -->
                             <div class="section-heading">
-                                <h5>Hot Channels</h5>
+                                <h5>Tag Artikel</h5>
                             </div>
 
                             <!-- Single YouTube Channel -->
-                            <div class="single-youtube-channel d-flex">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="{{ asset('assets/frontend/img/bg-img/14.jpg')}}" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title">TV Show</a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
-                                </div>
-                            </div>
 
-                            <!-- Single YouTube Channel -->
-                            <div class="single-youtube-channel d-flex">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="{{ asset('assets/frontend/img/bg-img/15.jpg')}}" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title">Game Channel</a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
-                                </div>
-                            </div>
 
-                            <!-- Single YouTube Channel -->
-                            <div class="single-youtube-channel d-flex">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="{{ asset('assets/frontend/img/bg-img/16.jpg')}}" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title">Sport Channel</a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
-                                </div>
-                            </div>
-
-                            <!-- Single YouTube Channel -->
-                            <div class="single-youtube-channel d-flex">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="{{ asset('assets/frontend/img/bg-img/17.jpg')}}" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title">Travel Channel</a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
-                                </div>
-                            </div>
-
-                            <!-- Single YouTube Channel -->
-                            <div class="single-youtube-channel d-flex">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="{{ asset('assets/frontend/img/bg-img/18.jpg')}}" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title">LifeStyle Channel</a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
-                                </div>
-                            </div>
 
                         </div>
 
@@ -399,3 +340,52 @@
     </section>
     <!-- ##### Post Details Area End ##### -->
 @endsection
+@push('script')
+{{-- KATEGORI --}}
+    <script>
+        var url = 'api/kategori'
+        $.ajax({
+            url : url,
+            dataType: ' json ',
+            success: function(berhasil) {
+                $.each(berhasil.data.kategori, function(key, value) {
+                    console.log(berhasil)
+                    $(".katgor").append(
+                        `
+                        <ul class="catagory-widgets">
+                            <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> ${value.nama_kategori}</span> </a></li>
+                        </ul>
+                        `
+                    )
+                })
+            },
+            error: function(gagal){
+                console.log(gagal)
+            }
+        })
+    </script>
+
+    {{-- TAG --}}
+    <script>
+        var url = 'api/tag'
+        $.ajax({
+            url : url,
+            dataType: ' json ',
+            success: function(berhasil) {
+                $.each(berhasil.data.kategori, function(key, value) {
+                    console.log(berhasil)
+                    $(".tag-artikel").append(
+                        `
+                        <ul class="tag-widgets tag-cloud">
+                            <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> ${value.nama_tag}</span> </a></li>
+                        </ul>
+                        `
+                    )
+                })
+            },
+            error: function(gagal){
+                console.log(gagal)
+            }
+        })
+    </script>
+@endpush
