@@ -169,7 +169,7 @@ class SiswaController extends Controller
         if (!$siswa) {
             $response = [
                 'success' => false,
-                'data' => 'Gagal Update',
+                'data' => 'Gagal Hapus',
                 'message' => 'Siswa tidak ditemukan'
             ];
             return response()->json($response, 404);

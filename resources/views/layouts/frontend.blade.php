@@ -12,10 +12,10 @@
     <title>Mag - Video &amp; Magazine HTML Template</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets/img/core-img/favicon.ico')}}">
+    <link rel="icon" href="{{ asset('assets/frontend/img/core-img/favicon.ico')}}">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('assets/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/style.css')}}">
 
 </head>
 
@@ -40,15 +40,19 @@
 
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="{{ asset('assets/js/jquery/jquery-2.2.4.min.js')}}"></script>
+    <script src="{{ asset('assets/frontend/js/jquery/jquery-2.2.4.min.js')}}"></script>
     <!-- Popper js -->
-    <script src="{{ asset('assets/js/bootstrap/popper.min.js')}}"></script>
+    <script src="{{ asset('assets/frontend/js/bootstrap/popper.min.js')}}"></script>
     <!-- Bootstrap js -->
-    <script src="{{ asset('assets/js/bootstrap/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('assets/frontend/js/bootstrap/bootstrap.min.js')}}"></script>
     <!-- All Plugins js -->
-    <script src="{{ asset('assets/js/plugins/plugins.js')}}"></script>
+    <script src="{{ asset('assets/frontend/js/plugins/plugins.js')}}"></script>
     <!-- Active js -->
-    <script src="{{ asset('assets/js/active.js')}}"></script>
+    <script src="{{ asset('assets/frontend/js/active.js')}}"></script>
+    @stack('script')
+
+
+
 </body>
 
 </html>

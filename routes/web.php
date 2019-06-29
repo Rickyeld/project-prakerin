@@ -11,21 +11,15 @@
 |
 */
 
-Route::get('/admin', function () {
+Route::get('/bawaan', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
     return view('frontend.front');
 });
 
-Route::get('/back', function () {
-    return view('layouts.back');
-});
+
 
 Route::get('/about', function () {
     return view('frontend.about');
@@ -54,3 +48,24 @@ Route::get('/single-post', function () {
 Route::get('/archive', function () {
     return view('frontend.archive');
 });
+
+Route::group(
+    ['prefix' => 'admin', 'middleware' => 'auth'],
+    function () {
+        Route::get('/', function () {
+            return view('backend.index');
+        });
+        route::resource('kategori', 'KategoriController');
+        route::resource('tag', 'TagController');
+        route::resource('artikel', 'ArtikelController');
+    }
+);
+
+// Route::resource('kategori', 'KategoriController');
+// Route::resource('artikel', 'ArtikelController');
+// Route::resource('tag', 'TagController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'HomeController@logout')->name('logout');

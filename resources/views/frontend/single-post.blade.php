@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('content')
     <!-- ##### Breadcrumb Area Start ##### -->
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/49.jpg);">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(assets/frontend/img/bg-img/49.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -40,7 +40,7 @@
                 <div class="col-12 col-xl-8">
                     <div class="post-details-content bg-white mb-30 p-30 box-shadow">
                         <div class="blog-thumb mb-30">
-                            <img src="{{ asset('assets/img/bg-img/50.jpg')}}" alt="">
+                            <img src="{{ asset('assets/frontend/img/bg-img/50.jpg')}}" alt="">
                         </div>
                         <div class="blog-content">
                             <div class="post-meta">
@@ -71,7 +71,7 @@
                                     <p>Aliquam venenatis dui elit, et viverra mi maximus quis. Etiam vel auctor elit. Ut ac eros suscipit, lobortis felison, vulputate tellus. Suspendisse hendrerit aliquet lectus.</p>
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <img class="mb-15" src="{{ asset('assets/img/bg-img/51.jpg')}}" alt="">
+                                    <img class="mb-15" src="{{ asset('assets/frontend/img/bg-img/51.jpg')}}" alt="">
                                 </div>
                             </div>
 
@@ -94,7 +94,7 @@
                             <!-- Post Author -->
                             <div class="post-author d-flex align-items-center">
                                 <div class="post-author-thumb">
-                                    <img src="{{ asset('assets/img/bg-img/52.jpg')}}" alt="">
+                                    <img src="{{ asset('assets/frontend/img/bg-img/52.jpg')}}" alt="">
                                 </div>
                                 <div class="post-author-desc pl-4">
                                     <a href="#" class="author-name">Alan Shaerer</a>
@@ -116,7 +116,7 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="single-blog-post style-4 mb-30">
                                     <div class="post-thumbnail">
-                                        <img src="{{ asset('assets/img/bg-img/29.jpg')}}" alt="">
+                                        <img src="{{ asset('assets/frontend/img/bg-img/29.jpg')}}" alt="">
                                     </div>
                                     <div class="post-content">
                                         <a href="single-post.html" class="post-title">Dentists Are Smiling Over Painless Veneer</a>
@@ -133,7 +133,7 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="single-blog-post style-4 mb-30">
                                     <div class="post-thumbnail">
-                                        <img src="{{ asset('assets/img/bg-img/30.jpg')}}" alt="">
+                                        <img src="{{ asset('assets/frontend/img/bg-img/30.jpg')}}" alt="">
                                         <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
                                         <span class="video-duration">09:27</span>
                                     </div>
@@ -152,7 +152,7 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="single-blog-post style-4 mb-30">
                                     <div class="post-thumbnail">
-                                        <img src="{{ asset('assets/img/bg-img/28.jpg')}}" alt="">
+                                        <img src="{{ asset('assets/frontend/img/bg-img/28.jpg')}}" alt="">
                                     </div>
                                     <div class="post-content">
                                         <a href="single-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
@@ -182,7 +182,7 @@
                                 <div class="comment-content d-flex">
                                     <!-- Comment Author -->
                                     <div class="comment-author">
-                                        <img src="{{ asset('assets/img/bg-img/53.jpg')}}" alt="author">
+                                        <img src="{{ asset('assets/frontend/img/bg-img/53.jpg')}}" alt="author">
                                     </div>
                                     <!-- Comment Meta -->
                                     <div class="comment-meta">
@@ -202,7 +202,7 @@
                                         <div class="comment-content d-flex">
                                             <!-- Comment Author -->
                                             <div class="comment-author">
-                                                <img src="{{ asset('assets/img/bg-img/54.jpg')}}" alt="author">
+                                                <img src="{{ asset('assets/frontend/img/bg-img/54.jpg')}}" alt="author">
                                             </div>
                                             <!-- Comment Meta -->
                                             <div class="comment-meta">
@@ -225,7 +225,7 @@
                                 <div class="comment-content d-flex">
                                     <!-- Comment Author -->
                                     <div class="comment-author">
-                                        <img src="{{ asset('assets/img/bg-img/55.jpg')}}" alt="author">
+                                        <img src="{{ asset('assets/frontend/img/bg-img/55.jpg')}}" alt="author">
                                     </div>
                                     <!-- Comment Meta -->
                                     <div class="comment-meta">
@@ -310,7 +310,7 @@
 
                         <!-- Sidebar Widget -->
                         <div class="single-sidebar-widget">
-                            <a href="#" class="add-img"><img src="{{ asset('assets/img/bg-img/add2.png')}}" alt=""></a>
+                            <a href="#" class="add-img"><img src="{{ asset('assets/frontend/img/bg-img/add2.png')}}" alt=""></a>
                         </div>
 
                         <!-- Sidebar Widget -->
@@ -323,7 +323,7 @@
                             <!-- Single YouTube Channel -->
                             <div class="single-youtube-channel d-flex">
                                 <div class="youtube-channel-thumbnail">
-                                    <img src="{{ asset('assets/img/bg-img/14.jpg')}}" alt="">
+                                    <img src="{{ asset('assets/frontend/img/bg-img/14.jpg')}}" alt="">
                                 </div>
                                 <div class="youtube-channel-content">
                                     <a href="single-post.html" class="channel-title">TV Show</a>
@@ -334,7 +334,7 @@
                             <!-- Single YouTube Channel -->
                             <div class="single-youtube-channel d-flex">
                                 <div class="youtube-channel-thumbnail">
-                                    <img src="{{ asset('assets/img/bg-img/15.jpg')}}" alt="">
+                                    <img src="{{ asset('assets/frontend/img/bg-img/15.jpg')}}" alt="">
                                 </div>
                                 <div class="youtube-channel-content">
                                     <a href="single-post.html" class="channel-title">Game Channel</a>
@@ -345,7 +345,7 @@
                             <!-- Single YouTube Channel -->
                             <div class="single-youtube-channel d-flex">
                                 <div class="youtube-channel-thumbnail">
-                                    <img src="{{ asset('assets/img/bg-img/16.jpg')}}" alt="">
+                                    <img src="{{ asset('assets/frontend/img/bg-img/16.jpg')}}" alt="">
                                 </div>
                                 <div class="youtube-channel-content">
                                     <a href="single-post.html" class="channel-title">Sport Channel</a>
@@ -356,7 +356,7 @@
                             <!-- Single YouTube Channel -->
                             <div class="single-youtube-channel d-flex">
                                 <div class="youtube-channel-thumbnail">
-                                    <img src="{{ asset('assets/img/bg-img/17.jpg')}}" alt="">
+                                    <img src="{{ asset('assets/frontend/img/bg-img/17.jpg')}}" alt="">
                                 </div>
                                 <div class="youtube-channel-content">
                                     <a href="single-post.html" class="channel-title">Travel Channel</a>
@@ -367,7 +367,7 @@
                             <!-- Single YouTube Channel -->
                             <div class="single-youtube-channel d-flex">
                                 <div class="youtube-channel-thumbnail">
-                                    <img src="{{ asset('assets/img/bg-img/18.jpg')}}" alt="">
+                                    <img src="{{ asset('assets/frontend/img/bg-img/18.jpg')}}" alt="">
                                 </div>
                                 <div class="youtube-channel-content">
                                     <a href="single-post.html" class="channel-title">LifeStyle Channel</a>
