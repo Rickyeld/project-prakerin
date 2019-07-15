@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('content')
     <!-- ##### Breadcrumb Area Start ##### -->
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(assets/frontend/img/bg-img/49.jpg);">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(../assets/frontend/img/bg-img/49.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -33,21 +33,92 @@
     <!-- ##### Breadcrumb Area End ##### -->
 
     <!-- ##### Post Details Area Start ##### -->
-    <section class="post-details-area">
+    <section class="post-details-area mag-posts-area d-flex flex-wrap">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center ">
+                <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                    <div class="sidebar-area  bg-white mb-30 box-shadow">
+                        <!-- Sidebar Widget -->
+                        <div class="single-sidebar-widget p-30">
+                            <!-- Social Followers Info -->
+                            <div class="social-followers-info">
+                                <!-- Facebook -->
+                                <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i> 4,360 <span>Fans</span></a>
+                                <!-- Twitter -->
+                                <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i> 3,280 <span>Followers</span></a>
+                                <!-- YouTube -->
+                                <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i> 1250 <span>Subscribers</span></a>
+                                <!-- Google -->
+                                <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar Widget -->
+                        <div class="single-sidebar-widget p-30 katgor">
+                            <!-- Section Title -->
+                            <div class="section-heading">
+                                <h5>Categories</h5>
+                            </div>
+
+                            <!-- Catagory Widget -->
+                            @foreach ($kategori as $data)
+                                <ul class="catagory-widgets">
+                                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>{{ $data->nama_kategori }}</span> <span>{{ $data->artikel->count() }}</span> </a></li>
+                                </ul>
+                            @endforeach
+
+
+                        </div>
+
+                        <!-- Sidebar Widget -->
+                        <div class="single-sidebar-widget">
+                            <a href="#" class="add-img"><img src="{{ asset('assets/frontend/img/bg-img/add2.png')}}" alt=""></a>
+                        </div>
+
+                        <!-- Sidebar Widget -->
+                        <div class="single-sidebar-widget p-30 tag-artikel">
+                            <!-- Section Title -->
+                            <div class="section-heading">
+                                <h5>Tag Artikel</h5>
+                            </div>
+
+                            <!-- Single YouTube Channel -->
+                            @foreach ($tag as $data)
+                            <ul class="tag-widgets tag-cloud">
+                                <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> {{ $data->nama_tag }}</span> </a></li>
+                            </ul>
+                            @endforeach
+                        </div>
+
+                        <!-- Sidebar Widget -->
+                        <div class="single-sidebar-widget p-30">
+                            <!-- Section Title -->
+                            <div class="section-heading">
+                                <h5>Newsletter</h5>
+                            </div>
+
+                            <div class="newsletter-form">
+                                <p>Subscribe our newsletter gor get notification about new updates, information discount, etc.</p>
+                                <form action="#" method="get">
+                                    <input type="search" name="widget-search" placeholder="Enter your email">
+                                    <button type="submit" class="btn mag-btn w-100">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- Post Details Content Area -->
                 <div class="col-12 col-xl-8">
-                    <div class="post-details-content bg-white mb-30 p-30 box-shadow">
+                    <div class="post-details-content bg-white mb-30 p-30 box-shadow "  style="single-post">
                         <div class="blog-thumb mb-30">
-                            <img src="{{ asset('assets/frontend/img/bg-img/50.jpg')}}" alt="">
+                            <img src="{{ asset('assets/img/artikel/' .$artikel->foto)}}" alt="">
                         </div>
                         <div class="blog-content">
                             <div class="post-meta">
-                                <a href="#">MAY 8, 2018</a>
-                                <a href="{{ url('archive') }}">lifestyle</a>
+                                <a href="#">{{$artikel->created_at->format('d M Y')}}</a>
+                                <a href="#">Penulis : {{$artikel->user->name}}</a>
                             </div>
-                            <h4 class="post-title">From Wetlands To Canals And Dams Amsterdam Is Alive</h4>
+                            <h4 class="post-title">{{ $artikel->judul }}</h4>
                             <!-- Post Meta -->
                             <div class="post-meta-2">
                                 <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
@@ -55,57 +126,22 @@
                                 <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
                             </div>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur sita adipiscing elit. Proin molestie accumsan orci suneget placerat. Etiama faucibuss orci quis posuere vestibulu. Ut id purusos ultricies, dictumax quam id, ullamcorper urna. Curabitur sitdown nisi vitae nisi vestotana vestibul ut non massa. Aliquam erat volutpat. Morbi nect nunc et orci euismode finibus. Donec lobortis venenatis turpis. Aenean act congue arcu, nect porttitor magna. Nam consequa ligula nibh, in maximus gravida. Vivamus nuornare masa. Quisque sed honcus leo, ullamcorper auctor mi. Maecenas mollis purus, mattis nisl condimentum. Nam eros elementu, congue diam imperdiet, interdum tellus.</p>
-
-                            <p>Mauris dapibus turpis vel ialis tempor. Morbi turpis leon, pulvinar vitae convallis vitae, scelerisque necto eros. Suspendisse vitae pharetra risus. Pellentesque varius, felis in lacinia faucibus, ipsum liula aliquam nulla, non honcus nunc ipsum eu risus. Nunc finibus euismod magna sagittis. Sed dictum libero consectetur.</p>
-
-                            <div class="row">
-                                <div class="col-12 col-lg-8">
-                                    <p>Vivamus nisl metus, dictum sit amet porttitor sit amet, lobortis sit amet ipsum. Mauris ut quam non magna gravida egestas. Sed rutrum sapien eget lorem bibendum ullamcorper.</p>
-                                    <ul>
-                                        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Duis blandit maximus tellus, sagittis volutpat tellus sandi.</li>
-                                        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Etiam vel auctor elit. Usaceros suscipit, lobortis felis non.</li>
-                                        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Integer sagittis finibus nequer, euster tincidunt misult.</li>
-                                        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Pellentesque euismod semeget diam ege</li>
-                                    </ul>
-                                    <p>Aliquam venenatis dui elit, et viverra mi maximus quis. Etiam vel auctor elit. Ut ac eros suscipit, lobortis felison, vulputate tellus. Suspendisse hendrerit aliquet lectus.</p>
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <img class="mb-15" src="{{ asset('assets/frontend/img/bg-img/51.jpg')}}" alt="">
-                                </div>
+                            <p>{!! $artikel->konten !!}</p>
+                            <div class="tag-widget post-tag-container mb-5 mt-5">
+                                @foreach($artikel->tag as $data)
+                                    <div class="tagcloud">
+                                        <a class="tag-cloud-link" href="/blog-tag/{{ $data->slug }}">
+                                            #{{ $data->nama_tag }}
+                                        </a>
+                                    </div>
+                                @endforeach
                             </div>
 
-                            <p>Mauris nisi arcu, consectetur convallis fringilla quis, posuere ac mauris. Ut in placerat lorem. Donec cursus malesuada nibhem, eget consectetur posuere sed. Suspendisse auctor nec diamet consectetur. Etiam ac maurised nisib tincidunt viverra. Sed nulla lacus, convallis vel nunc sed, fringilla venenatis neque.</p>
-
-                            <blockquote>
-                                <h6 class="quote-text">“Design is a funny word. Some people think design means how it looks. But of course, if you dig deeper, it's really how it works. The design of the Mac wasn't what it looked like, although that was part of it.”</h6>
-                                <h6 class="quote-name">STEVE JOBS</h6>
-                            </blockquote>
-
-                            <p>Phasellus laoreet mattis ultrices. Integer ex sem, ultrices eu sem in, laoreet vehicula ligula. Phasellus quistor blandit salah convallis augue. Sed velot dictum sapient. In pulvinar libero turpis. Quisque facilisis bigbang consenti. Nullam bendumaz, massan consequat in gravida porttitor, aguet lacus condimentum mauris, id blandit quam augue eget mana. Etiam denim jeans lacus, nascetur auge bibendum vel pulvinar viverra, mattis sit amet mi. Mauris fringilla, ex vitae maximus fringilla, neque sapien maximus justo, cursus risus neque sed nibh. Donec at urna eros scelerisque non nibh sed.</p>
-
-                            <!-- Like Dislike Share -->
-                            <div class="like-dislike-share my-5">
-                                <h4 class="share">240<span>Share</span></h4>
-                                <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
-                            </div>
-
-                            <!-- Post Author -->
-                            <div class="post-author d-flex align-items-center">
-                                <div class="post-author-thumb">
-                                    <img src="{{ asset('assets/frontend/img/bg-img/52.jpg')}}" alt="">
-                                </div>
-                                <div class="post-author-desc pl-4">
-                                    <a href="#" class="author-name">Alan Shaerer</a>
-                                    <p>Duis tincidunt turpis sodales, tincidunt nisi et, auctor nisi. Curabitur vulputate sapien eu metus ultricies fermentum nec vel augue. Maecenas eget lacinia est.</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
                     <!-- Related Post Area -->
-                    <div class="related-post-area bg-white mb-30 px-30 pt-30 box-shadow">
+                    {{-- <div class="related-post-area bg-white mb-30 px-30 pt-30 box-shadow">
                         <!-- Section Title -->
                         <div class="section-heading">
                             <h5>Related Post</h5>
@@ -166,10 +202,10 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Comment Area Start -->
-                    <div class="comment_area clearfix bg-white mb-30 p-30 box-shadow">
+                    {{-- <div class="comment_area clearfix bg-white mb-30 p-30 box-shadow">
                         <!-- Section Title -->
                         <div class="section-heading">
                             <h5>COMMENTS</h5>
@@ -240,7 +276,7 @@
                                 </div>
                             </li>
                         </ol>
-                    </div>
+                    </div> --}}
 
                     <!-- Post A Comment Area -->
                     <div class="post-a-comment-area bg-white mb-30 p-30 box-shadow clearfix">
@@ -250,91 +286,33 @@
                         </div>
 
                         <!-- Reply Form -->
-                        <div class="contact-form-area">
-                            <form action="#" method="post">
-                                <div class="row">
-                                    <div class="col-12 col-lg-6">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name*" required>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email*" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message*" required></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn mag-btn mt-30" type="submit">Submit Comment</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                        <div id="disqus_thread"></div>
+                                <script>
+
+                                /**
+                                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                                /*
+                                var disqus_config = function () {
+                                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                };
+                                */
+                                (function() { // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+                                s.src = 'https://blog-family-friendly.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                                })();
+                                </script>
+                                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                            </div> <!-- .col-md-8 -->
                     </div>
                 </div>
 
                 <!-- Sidebar Widget -->
-                <div class="col-12 col-md-6 col-lg-5 col-xl-4">
-                    <div class="sidebar-area bg-white mb-30 box-shadow">
-                        <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
-                            <!-- Social Followers Info -->
-                            <div class="social-followers-info">
-                                <!-- Facebook -->
-                                <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i> 4,360 <span>Fans</span></a>
-                                <!-- Twitter -->
-                                <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i> 3,280 <span>Followers</span></a>
-                                <!-- YouTube -->
-                                <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i> 1250 <span>Subscribers</span></a>
-                                <!-- Google -->
-                                <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
-                            </div>
-                        </div>
 
-                        <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30 katgor">
-                            <!-- Section Title -->
-                            <div class="section-heading">
-                                <h5>Categories</h5>
-                            </div>
-
-                            <!-- Catagory Widget -->
-
-                        </div>
-
-                        <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget">
-                            <a href="#" class="add-img"><img src="{{ asset('assets/frontend/img/bg-img/add2.png')}}" alt=""></a>
-                        </div>
-
-                        <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30 tag-artikel">
-                            <!-- Section Title -->
-                            <div class="section-heading">
-                                <h5>Tag Artikel</h5>
-                            </div>
-
-                            <!-- Single YouTube Channel -->
-
-
-
-                        </div>
-
-                        <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
-                            <!-- Section Title -->
-                            <div class="section-heading">
-                                <h5>Newsletter</h5>
-                            </div>
-
-                            <div class="newsletter-form">
-                                <p>Subscribe our newsletter gor get notification about new updates, information discount, etc.</p>
-                                <form action="#" method="get">
-                                    <input type="search" name="widget-search" placeholder="Enter your email">
-                                    <button type="submit" class="btn mag-btn w-100">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

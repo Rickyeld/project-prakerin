@@ -27,20 +27,20 @@
                             <div class="classynav kategori-cuy">
                                 <ul>
                                     <li class="active"><a href="{{url('/')}}">Home</a></li>
-                                    {{-- <li><a href="{{url('archive')}}">Archive</a></li>
+                                    <li><a href="{{url('archive')}}">Archive</a></li>
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href="{{url('/')}}">Home</a></li>
                                             <li><a href="{{url('archive')}}">Archive</a></li>
                                             <li><a href="{{url('video-post')}}">Single Video Post</a></li>
-                                            <li><a href="{{url('single-post')}}">Single Post</a></li>
+
                                             <li><a href="{{url('about')}}">About Us</a></li>
                                             <li><a href="{{url('contact')}}">Contact</a></li>
                                             <li><a href="{{url('submit-video')}}">Submit Video</a></li>
                                             <li><a href="{{url('log')}}">Login</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Mega</a>
+                                    {{-- <li><a href="#">Mega</a>
                                             <ul class="dropdown">
                                                 <li><a href="{{url('/')}}">Home</a></li>
                                                 <li><a href="{{url('archive')}}">Archive</a></li>
@@ -50,9 +50,9 @@
                                                 <li><a href="{{url('contact')}}">Contact</a></li>
                                                 <li><a href="{{url('log')}}">Login</a></li>
                                             </ul>
-                                    </li>
+                                    </li> --}}
                                     <li><a href="{{url('about')}}">About</a></li>
-                                    <li><a href="{{url('contact')}}">Contact</a></li> --}}
+                                    <li><a href="{{url('contact')}}">Contact</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -76,7 +76,7 @@
             </div>
         </div>
     </header>
-@push('script')
+{{-- @push('script')
     <script>
         var url = 'api/kategori'
         $.ajax({
@@ -99,4 +99,4 @@
             }
         })
     </script>
-@endpush
+@endpush --}}

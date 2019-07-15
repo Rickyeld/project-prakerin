@@ -12,6 +12,60 @@ use App\User;
 
 class FrontendController extends Controller
 {
+    public function front()
+    {
+        $artikel = Artikel::orderBy('created_at', 'desc')->take(4)->get();
+
+        return view('frontend.front', compact('artikel'));
+    }
+
+    public function about()
+    {
+        return view('frontend.about');
+    }
+
+    public function contact()
+    {
+        return view('frontend.contact');
+    }
+
+    public function archive()
+    {
+        return view('frontend.archive');
+    }
+
+    public function blog()
+    {
+        $artikel = Artikel::orderBy('created_at', 'desc')->paginate(3);
+        $kategori = Kategori::all();
+        $tag = Tag::all();
+        return view('frontend.blog', compact('artikel', 'kategori', 'tag'));
+    }
+
+    public function singleblog(Artikel $artikel)
+    {
+        $kategori = Kategori::all();
+        $tag = Tag::all();
+        return view('frontend.single-post', compact('artikel', 'kategori', 'tag'));
+    }
+
+
+    public function blogtag(Tag $tag)
+    {
+        $artikel = $tag->Artikel()->latest()->paginate(5);
+        $kategori = Kategori::all();
+        $tag = Tag::all();
+        return view('frontend.blog', compact('artikel', 'kategori', 'tag'));
+    }
+
+    public function blogkategori(Kategori $kategori)
+    {
+        $artikel = $kategori->Artikel()->latest()->paginate(5);
+        $kategori = Kategori::all();
+        $tag = Tag::all();
+        return view('frontend.blog', compact('artikel', 'kategori', 'tag'));
+    }
+
     public function index()
     {
         $menu = Kategori::take(3)->get();
@@ -49,7 +103,7 @@ class FrontendController extends Controller
 
     public function trending()
     {
-        $artikel = Artikel::take(3)->get();
+        $artikel = Artikel::take(4)->get();
         $tag = Tag::all();
         $kategori = Kategori::all();
 

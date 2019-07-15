@@ -146,7 +146,7 @@
 
 
                                     <!-- Most Viewed Videos -->
-                                    <div class="most-viewed-videos mb-30">
+                                    {{-- <div class="most-viewed-videos mb-30">
                                         <!-- Section Title -->
                                         <div class="section-heading">
                                             <h5>Most Viewed Videos</h5>
@@ -257,7 +257,7 @@
                                             </div>
 
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <!-- Sports Videos -->
 
@@ -291,7 +291,7 @@
                         <img src="assets/img/artikel/${value.foto}" alt="">
                     </div>
                     <div class="post-content">
-                        <a href="${value.slug}" class="post-title">${value.judul}</a>
+                        <a href="/blog/${value.slug}" class="post-title">${value.judul}</a>
                         <div class="post-meta d-flex justify-content-between">
                             <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 2569</a>
                             <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 1069</a>
@@ -328,10 +328,10 @@
                         <!-- Post Contetnt -->
                         <div class="post-content">
                             <div class="post-meta">
-                                <a href="#">{{date('d-m-Y')}}</a>
+                                <a href="#">${value.created_at}</a>
                                 <a href="{{url('archive')}}">lifestyle</a>
                             </div>
-                            <a href="{{url('single-post')}}" class="post-title">${value.judul}</a>
+                            <a href="/blog/${value.slug}" class="post-title">${value.judul}</a>
                             <p >${value.konten}</p>
                         </div>
                         <!-- Post Share Area -->
@@ -354,6 +354,7 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
                     </div>
                         `
                     )
