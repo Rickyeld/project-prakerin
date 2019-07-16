@@ -12,9 +12,9 @@ class user extends Seeder
     public function run()
     {
         App\User::create([
-            'name' => 'Rickde',
+            'name' => 'Ricky',
             'email' => 'admin@gmail.com',
-            'password' => 'fazaganteng'
+            'password' => 'kiki25072002'
         ]);
     }
 }
