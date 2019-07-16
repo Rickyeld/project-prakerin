@@ -48,17 +48,16 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="navbar-link" href="{{ route('kategori.index') }}">Kategori</a>
+                            <a class="navbar-link" href="{{ route('kategori.index') }}">Kategori</a>&nbsp;&nbsp;&nbsp;
                         </li>
                          <li class="nav-item">
-                            <a class="navbar-link" href="{{ route('tag.index') }}">Tag</a>
+                            <a class="navbar-link" href="{{ route('tag.index') }}">Tag</a>&nbsp;&nbsp;&nbsp;
                         </li>
                          <li class="nav-item">
                             <a class="navbar-link" href="{{ route('artikel.index') }}">Artikel</a>
                         </li>
-                    <ul class="navbar-nav mr-auto">
-
                     </ul>
 
                     <!-- Right Side Of Navbar -->
