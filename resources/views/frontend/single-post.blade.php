@@ -63,7 +63,7 @@
                             <!-- Catagory Widget -->
                             @foreach ($kategori as $data)
                                 <ul class="catagory-widgets">
-                                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>{{ $data->nama_kategori }}</span> <span>{{ $data->artikel->count() }}</span> </a></li>
+                                    <li><a href="/blog-kategori/{{ $data->slug }}"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i>{{ $data->nama_kategori }}</span> <span>{{ $data->artikel->count() }}</span> </a></li>
                                 </ul>
                             @endforeach
 
@@ -85,7 +85,7 @@
                             <!-- Single YouTube Channel -->
                             @foreach ($tag as $data)
                             <ul class="tag-widgets tag-cloud">
-                                <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> {{ $data->nama_tag }}</span> </a></li>
+                                <li><a href="/blog-tag/{{ $data->slug }}"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> {{ $data->nama_tag }}</span> </a></li>
                             </ul>
                             @endforeach
                         </div>

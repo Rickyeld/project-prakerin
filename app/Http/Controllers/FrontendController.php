@@ -39,7 +39,7 @@ class FrontendController extends Controller
         $artikel = Artikel::orderBy('created_at', 'desc')->paginate(3);
         $kategori = Kategori::all();
         $tag = Tag::all();
-        return view('frontend.blog', compact('artikel', 'kategori', 'tag'));
+        return view('frontend.archive', compact('artikel', 'kategori', 'tag'));
     }
 
     public function singleblog(Artikel $artikel)
@@ -55,7 +55,7 @@ class FrontendController extends Controller
         $artikel = $tag->Artikel()->latest()->paginate(5);
         $kategori = Kategori::all();
         $tag = Tag::all();
-        return view('frontend.blog', compact('artikel', 'kategori', 'tag'));
+        return view('frontend.archive', compact('artikel', 'kategori', 'tag'));
     }
 
     public function blogkategori(Kategori $kategori)
@@ -63,7 +63,7 @@ class FrontendController extends Controller
         $artikel = $kategori->Artikel()->latest()->paginate(5);
         $kategori = Kategori::all();
         $tag = Tag::all();
-        return view('frontend.blog', compact('artikel', 'kategori', 'tag'));
+        return view('frontend.archive', compact('artikel', 'kategori', 'tag'));
     }
 
     public function index()
