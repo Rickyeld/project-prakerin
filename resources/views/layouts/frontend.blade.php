@@ -49,6 +49,8 @@
     <script src="{{ asset('assets/frontend/js/plugins/plugins.js')}}"></script>
     <!-- Active js -->
     <script src="{{ asset('assets/frontend/js/active.js')}}"></script>
+
+    <script id="dsq-count-scr" src="//indo-pariwisata.disqus.com/count.js" async></script>
     @stack('script')
 
 

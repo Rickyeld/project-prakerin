@@ -27,11 +27,11 @@
                             <div class="classynav kategori-cuy">
                                 <ul>
                                     <li class="active"><a href="{{url('/')}}">Home</a></li>
-                                    <li><a href="{{url('archive')}}">Archive</a></li>
+                                    <li><a href="/blog/">Archive</a></li>
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href="{{url('/')}}">Home</a></li>
-                                            <li><a href="{{url('archive')}}">Archive</a></li>
+                                            <li><a href="/blog/">Archive</a></li>
                                             <li><a href="{{url('video-post')}}">Single Video Post</a></li>
 
                                             <li><a href="{{url('about')}}">About Us</a></li>
