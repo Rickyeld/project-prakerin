@@ -110,19 +110,13 @@
                         </div>
 
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
+                        <div class="single-sidebar-widget p-30 tambah-tag">
                             <!-- Section Title -->
                             <div class="section-heading">
-                                <h5>Newsletter</h5>
+                                <h5>Artikel Tags</h5>
                             </div>
 
-                            <div class="newsletter-form">
-                                <p>Subscribe our newsletter gor get notification about new updates, information discount, etc.</p>
-                                <form action="#" method="get">
-                                    <input type="search" name="widget-search" placeholder="Enter your email">
-                                    <button type="submit" class="btn mag-btn w-100">Subscribe</button>
-                                </form>
-                            </div>
+                            {{-- Tag Content --}}
 
                         </div>
                     </div>
@@ -379,6 +373,30 @@
                         `
                         <ul class="catagory-widgets">
                             <li><a href="/blog-kategori/${value.slug}"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> ${value.nama_kategori}</span></a></li>
+                        </ul>
+                        `
+                    )
+                })
+            },
+            error: function(gagal){
+                console.log(gagal)
+            }
+        })
+    </script>
+
+    {{-- TAG --}}
+    <script>
+        var url = 'api/tag'
+        $.ajax({
+            url : url,
+            dataType: ' json ',
+            success: function(berhasil) {
+                $.each(berhasil.data.tag, function(key, value) {
+                    console.log(berhasil)
+                    $(".tambah-tag").append(
+                        `
+                        <ul class="catagory-widgets">
+                            <li><a href="/blog-tag/${value.slug}"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> ${value.nama_tag}</span></a></li>
                         </ul>
                         `
                     )

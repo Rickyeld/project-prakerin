@@ -124,21 +124,21 @@ class FrontendController extends Controller
         $response = [
             'Success' => true,
             'data' => ['artikel' => $artikel, 'tag' => $tag, 'kategori' => $kategori],
-            'message' => 'Artikel berhasil ditemukan'
+            'message' => 'Kategori berhasil ditemukan'
         ];
         return response()->json($response, 200);
     }
 
     public function tag()
     {
-        $kategori = Tag::take(3)->get();
-        $tag = Kategori::all();
+        $tag = Tag::take(3)->get();
+        $kategori = Kategori::all();
         $artikel = Artikel::all();
 
         $response = [
             'Success' => true,
             'data' => ['artikel' => $artikel, 'tag' => $tag, 'kategori' => $kategori],
-            'message' => 'Artikel berhasil ditemukan'
+            'message' => 'Tag berhasil ditemukan'
         ];
         return response()->json($response, 200);
     }
