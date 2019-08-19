@@ -18,13 +18,28 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('assets/backend/assets/css/vendor/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/backend/assets/vendor/metismenu/dist/metisMenu.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/backend/assets/vendor/switchery-npm/index.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/backend/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css')}}">
+    <!-- ======================= LINE AWESOME ICONS ===========================-->
+    <link rel="stylesheet" href="{{asset('assets/backend/assets/css/icons/line-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/backend/assets/css/icons/simple-line-icons.css')}}">
+    <!-- ======================= DRIP ICONS ===================================-->
+    <link rel="stylesheet" href="{{asset('assets/backend/assets/css/icons/dripicons.min.css')}}">
+    <!-- ======================= MATERIAL DESIGN ICONIC FONTS =================-->
+    <link rel="stylesheet" href="{{asset('assets/backend/assets/css/icons/material-design-iconic-font.min.css')}}">
+    <!-- ======================= PAGE VENDOR STYLES ===========================-->
+    <link rel="stylesheet" href="{{asset('assets/backend/assets/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
+    <!-- ======================= GLOBAL COMMON STYLES ============================-->
+    <link rel="stylesheet" href="{{asset('assets/backend/assets/css/common/main.bundle.css')}}">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name','Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -33,15 +48,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="navbar-link" href="{{ route('kategori.index') }}">Kategori</a>&nbsp;&nbsp;&nbsp;
-                        </li>
-                         <li class="nav-item">
-                            <a class="navbar-link" href="{{ route('tag.index') }}">Tag</a>&nbsp;&nbsp;&nbsp;
-                        </li>
-                         <li class="nav-item">
-                            <a class="navbar-link" href="{{ route('artikel.index') }}">Artikel</a>
-                        </li>
+                        @guest
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('kategori.index') }}">Kategori</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('artikel.index') }}">Artikel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('tag.index') }}">Tag</a>
+                            </li>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->

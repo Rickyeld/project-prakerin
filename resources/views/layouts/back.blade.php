@@ -33,37 +33,38 @@
     <link rel="stylesheet" href="{{asset('assets/backend/assets/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
     <!-- ======================= GLOBAL COMMON STYLES ============================-->
     <link rel="stylesheet" href="{{asset('assets/backend/assets/css/common/main.bundle.css')}}">
-    @yield('css')
-
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <b><i>Eldiansyah</i></b>
+                    {{ Auth::user()->name }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="navbar-link" href="{{ route('kategori.index') }}">Kategori</a>&nbsp;&nbsp;&nbsp;
-                        </li>
-                         <li class="nav-item">
-                            <a class="navbar-link" href="{{ route('tag.index') }}">Tag</a>&nbsp;&nbsp;&nbsp;
-                        </li>
-                         <li class="nav-item">
-                            <a class="navbar-link" href="{{ route('artikel.index') }}">Artikel</a>
-                        </li>
+                        @guest
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('kategori.index') }}">Kategori</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('artikel.index') }}">Artikel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('tag.index') }}">Tag</a>
+                            </li>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -101,39 +102,5 @@
             @yield('content')
         </main>
     </div>
-
-    {{-- style js --}}
-    <script src="{{asset('assets/backend/assets/vendor/modernizr/modernizr.custom.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/jquery/dist/jquery.min.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/js-storage/js.storage.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/js-cookie/src/js.cookie.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/pace/pace.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/metismenu/dist/metisMenu.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/switchery-npm/index.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-    <!-- ================== PAGE LEVEL VENDOR SCRIPTS ==================-->
-    <script src="{{asset('assets/backend/assets/vendor/countup.js/dist/countUp.min.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/chart.js/dist/Chart.bundle.min.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/flot/jquery.flot.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/flot/jquery.flot.resize.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/flot/jquery.flot.time.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/flot.curvedlines/curvedLines.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/datatables.net/js/jquery.dataTables.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
-    <!-- ================== GLOBAL APP SCRIPTS ==================-->
-    <script src="{{asset('assets/backend/assets/js/global/app.js')}}"></script>
-    <!-- ================== PAGE LEVEL SCRIPTS ==================-->
-    <script src="{{asset('assets/backend/assets/js/components/countUp-init.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/js/cards/counter-group.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/js/cards/recent-transactions.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/js/cards/monthly-budget.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/js/cards/users-chart.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/js/cards/bounce-rate-chart.js')}}"></script>
-    <script src="{{asset('assets/backend/assets/js/cards/session-duration-chart.js')}}"></script>
-    @yield('js')
-
-
 </body>
 </html>
