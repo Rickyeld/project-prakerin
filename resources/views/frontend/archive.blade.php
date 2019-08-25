@@ -44,16 +44,20 @@
                         <div class="col-md-12 ftco-animate">
                             <div class="blog-entry" data-aos-delay="200">
                             <a href="/blog/{{$data->slug}}" class="block-20" >
-                                <img class="img-fluid background-image"
+                                <img class="img-fluid background-image" style="height:400px; width:450px;"
                                 src="{{asset('assets/img/artikel/' .$data->foto)}}">
                             </a>
                             <div class="text p-4">
                                 <div class="meta mb-3 ">
-                                <div><a href="#">{{$data->created_at->format('d M Y')}},</a></div>
-                                <div><a href="#">{{$data->user->name}}</a></div>
+                                    <div>
+                                        <a href="#">{{$data->created_at->format('d M Y')}}, {{$data->user->name}}</a>
+                                    </div>
                                 </div>
-                                <h3 class="heading"><a href="/blog/{{$data->slug}}">
-                                {{$data->judul}}</a></h3>
+                                <div>
+                                <b>
+                                <a href="/blog/{{$data->slug}}">
+                                {{$data->judul}}</a></b>
+                                </div><br>
                                 <div class="single-widget tags-widget">
                                         @foreach($data->tag as $key)
                                             <div class="tagcloud">

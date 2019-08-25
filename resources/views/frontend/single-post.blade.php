@@ -71,9 +71,7 @@
                         </div>
 
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget">
-                            <a href="#" class="add-img"><img src="{{ asset('assets/frontend/img/bg-img/add2.png')}}" alt=""></a>
-                        </div>
+
 
                         <!-- Sidebar Widget -->
                         <div class="single-sidebar-widget p-30 tag-artikel">
@@ -91,27 +89,14 @@
                         </div>
 
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
-                            <!-- Section Title -->
-                            <div class="section-heading">
-                                <h5>Newsletter</h5>
-                            </div>
 
-                            <div class="newsletter-form">
-                                <p>Subscribe our newsletter gor get notification about new updates, information discount, etc.</p>
-                                <form action="#" method="get">
-                                    <input type="search" name="widget-search" placeholder="Enter your email">
-                                    <button type="submit" class="btn mag-btn w-100">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <!-- Post Details Content Area -->
                 <div class="col-12 col-xl-8">
                     <div class="post-details-content bg-white mb-30 p-30 box-shadow "  style="single-post">
                         <div class="blog-thumb mb-30">
-                            <img src="{{ asset('assets/img/artikel/' .$artikel->foto)}}" alt="">
+                            <img src="{{ asset('assets/img/artikel/' .$artikel->foto)}}" style="height:400px; width:450px;" alt="">
                         </div>
                         <div class="blog-content">
                             <div class="post-meta">

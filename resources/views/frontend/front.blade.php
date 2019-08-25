@@ -314,7 +314,7 @@
                      <div class="single-featured-post">
                         <!-- Thumbnail -->
                         <div class="post-thumbnail mb-50">
-                            <img src="assets/img/artikel/${value.foto}" alt="">
+                            <img src="assets/img/artikel/${value.foto}" style="height:400px; width:450px;" alt="">
                         </div>
                         <!-- Post Contetnt -->
                         <div class="post-content">
