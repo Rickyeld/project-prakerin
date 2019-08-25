@@ -27,7 +27,9 @@
                             <div class="classynav kategori-cuy">
                                 <ul>
                                     <li class="active"><a href="{{url('/')}}">Home</a></li>
-                                    <li><a href="/blog/">Archive</a></li>
+                                    <li><a href="{{url('/blog-kategori/wisata-lokal')}}">Wisata Lokal</a></li>
+                                    <li><a href="{{url('/blog-kategori/wisata-dunia')}}">Wisata Dunia</a></li>
+                                    {{-- <li><a href="/blog/">Archive</a></li>
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href="{{url('/')}}">Home</a></li>
@@ -39,7 +41,7 @@
                                             <li><a href="{{url('submit-video')}}">Submit Video</a></li>
                                             <li><a href="{{url('log')}}">Login</a></li>
                                         </ul>
-                                    </li>
+                                    </li> --}}
                                     {{-- <li><a href="#">Mega</a>
                                             <ul class="dropdown">
                                                 <li><a href="{{url('/')}}">Home</a></li>
@@ -51,14 +53,14 @@
                                                 <li><a href="{{url('log')}}">Login</a></li>
                                             </ul>
                                     </li> --}}
-                                    <li><a href="{{url('about')}}">About</a></li>
-                                    <li><a href="{{url('contact')}}">Contact</a></li>
+                                    {{-- <li><a href="{{url('about')}}">About</a></li>
+                                    <li><a href="{{url('contact')}}">Contact</a></li> --}}
                                 </ul>
                             </div>
                             <!-- Nav End -->
                         </div>
 
-                        <div class="top-meta-data d-flex align-items-center">
+                        {{-- <div class="top-meta-data d-flex align-items-center">
                             <!-- Top Search Area -->
                             <div class="top-search-area">
                                 <form action="{{url('/')}}" method="post">
@@ -70,7 +72,7 @@
                             <a href="{{url('log')}}" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
                             <!-- Submit Video -->
                             <a href="{{url('submit-video')}}" class="submit-video"><span><i class="fa fa-cloud-upload"></i></span> <span class="video-text">Submit Video</span></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </nav>
             </div>

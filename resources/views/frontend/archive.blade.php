@@ -87,7 +87,7 @@
                 <div class="col-12 col-md-6 col-lg-5 col-xl-4">
                     <div class="sidebar-area bg-white mb-30 box-shadow">
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
+                        {{-- <div class="single-sidebar-widget p-30">
                             <!-- Social Followers Info -->
                             <div class="social-followers-info">
                                 <!-- Facebook -->
@@ -99,7 +99,7 @@
                                 <!-- Google -->
                                 <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <!-- Sidebar Widget -->
                         <div class="single-sidebar-widget p-30">
@@ -138,7 +138,7 @@
                         </div>
 
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
+                        {{-- <div class="single-sidebar-widget p-30">
                             <!-- Section Title -->
                             <div class="section-heading">
                                 <h5>Newsletter</h5>
@@ -152,7 +152,7 @@
                                 </form>
                             </div>
 
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

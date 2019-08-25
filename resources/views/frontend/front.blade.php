@@ -13,9 +13,8 @@
                                 <a href="#">{{date('d-m-Y')}}</a>
                                 <a href="{{url('archive')}}">lifestyle</a>
                             </div>
-                            <a href="{{url('video-post')}}" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
-                            <a href="{{url('video-post')}}" class="video-play" data-animation="bounceIn" data-delay="500ms"><i class="fa fa-play"></i></a>
-                        </div>
+                            <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -32,8 +31,8 @@
                                 <a href="#">{{date('d-m-Y')}}</a>
                                 <a href="{{url('archive')}}">lifestyle</a>
                             </div>
-                            <a href="{{url('video-post')}}" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
-                            <a href="{{url('video-post')}}" class="video-play" data-animation="bounceIn" data-delay="500ms"><i class="fa fa-play"></i></a>
+                            <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
+                            <a href="#" class="video-play" data-animation="bounceIn" data-delay="500ms"><i class="fa fa-play"></i></a>
                         </div>
                     </div>
                 </div>
@@ -51,8 +50,8 @@
                                 <a href="#">{{date('d-m-Y')}}</a>
                                 <a href="{{url('archive')}}">lifestyle</a>
                             </div>
-                            <a href="{{url('video-post')}}" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
-                            <a href="{{url('video-post')}}" class="video-play" data-animation="bounceIn" data-delay="500ms"><i class="fa fa-play"></i></a>
+                            <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
+                            <a href="#" class="video-play" data-animation="bounceIn" data-delay="500ms"><i class="fa fa-play"></i></a>
                         </div>
                     </div>
                 </div>
@@ -70,7 +69,7 @@
                     <<<<<<<<<<<<<<<<<<<<< -->
                     <div class="post-sidebar-area left-sidebar mt-30 mb-30 box-shadow " >
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
+                        {{-- <div class="single-sidebar-widget p-30">
                             <!-- Social Followers Info -->
                             <div class="social-followers-info">
                                 <!-- Facebook -->
@@ -82,7 +81,7 @@
                                 <!-- Google -->
                                 <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <!-- Sidebar Widget -->
                         <div class="single-sidebar-widget p-30 kategorian">
@@ -152,7 +151,7 @@
                                             <div class="single-blog-post style-4">
                                                 <div class="post-thumbnail">
                                                     <img src="{{ asset('assets/frontend/img/bg-img/28.jpg')}}" alt="">
-                                                    <a href="{{url('video-post')}}" class="video-play"><i class="fa fa-play"></i></a>
+                                                    <a href="#" class="video-play"><i class="fa fa-play"></i></a>
                                                     <span class="video-duration">09:27</span>
                                                 </div>
                                                 <div class="post-content">
@@ -169,7 +168,7 @@
                                             <div class="single-blog-post style-4">
                                                 <div class="post-thumbnail">
                                                     <img src="{{ asset('assets/frontend/img/bg-img/29.jpg')}}" alt="">
-                                                    <a href="{{url('video-post')}}" class="video-play"><i class="fa fa-play"></i></a>
+                                                    <a href="#" class="video-play"><i class="fa fa-play"></i></a>
                                                     <span class="video-duration">09:27</span>
                                                 </div>
                                                 <div class="post-content">
@@ -186,7 +185,7 @@
                                             <div class="single-blog-post style-4">
                                                 <div class="post-thumbnail">
                                                     <img src="{{ asset('assets/frontend/img/bg-img/30.jpg')}}" alt="">
-                                                    <a href="{{url('video-post')}}" class="video-play"><i class="fa fa-play"></i></a>
+                                                    <a href="#" class="video-play"><i class="fa fa-play"></i></a>
                                                     <span class="video-duration">09:27</span>
                                                 </div>
                                                 <div class="post-content">
@@ -203,7 +202,7 @@
                                             <div class="single-blog-post style-4">
                                                 <div class="post-thumbnail">
                                                     <img src="{{ asset('assets/frontend/img/bg-img/28.jpg')}}" alt="">
-                                                    <a href="{{url('video-post')}}" class="video-play"><i class="fa fa-play"></i></a>
+                                                    <a href="#" class="video-play"><i class="fa fa-play"></i></a>
                                                     <span class="video-duration">09:27</span>
                                                 </div>
                                                 <div class="post-content">
@@ -220,7 +219,7 @@
                                             <div class="single-blog-post style-4">
                                                 <div class="post-thumbnail">
                                                     <img src="{{ asset('assets/frontend/img/bg-img/29.jpg')}}" alt="">
-                                                    <a href="{{url('video-post')}}" class="video-play"><i class="fa fa-play"></i></a>
+                                                    <a href="#" class="video-play"><i class="fa fa-play"></i></a>
                                                     <span class="video-duration">09:27</span>
                                                 </div>
                                                 <div class="post-content">
@@ -237,7 +236,7 @@
                                             <div class="single-blog-post style-4">
                                                 <div class="post-thumbnail">
                                                     <img src="{{ asset('assets/frontend/img/bg-img/30.jpg')}}" alt="">
-                                                    <a href="{{url('video-post')}}" class="video-play"><i class="fa fa-play"></i></a>
+                                                    <a href="#" class="video-play"><i class="fa fa-play"></i></a>
                                                     <span class="video-duration">09:27</span>
                                                 </div>
                                                 <div class="post-content">
