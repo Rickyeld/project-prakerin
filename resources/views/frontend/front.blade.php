@@ -32,7 +32,6 @@
                                 <a href="{{url('archive')}}">lifestyle</a>
                             </div>
                             <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
-                            <a href="#" class="video-play" data-animation="bounceIn" data-delay="500ms"><i class="fa fa-play"></i></a>
                         </div>
                     </div>
                 </div>
@@ -51,7 +50,6 @@
                                 <a href="{{url('archive')}}">lifestyle</a>
                             </div>
                             <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
-                            <a href="#" class="video-play" data-animation="bounceIn" data-delay="500ms"><i class="fa fa-play"></i></a>
                         </div>
                     </div>
                 </div>
