@@ -21,7 +21,10 @@ class FrontendController extends Controller
 
     public function about()
     {
-        return view('frontend.about');
+        $artikel = Artikel::orderBy('created_at', 'desc')->paginate(3);
+        $kategori = Kategori::all();
+        $tag = Tag::all();
+        return view('frontend.about', compact('artikel', 'kategori', 'tag'));
     }
 
     public function contact()
