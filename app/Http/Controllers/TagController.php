@@ -82,7 +82,8 @@ class TagController extends Controller
             'data' => $tag,
             'message' => 'Tag berhasil ditambahkan'
         ];
-        return response()->json($response, 200);
+        // return response()->json($response, 200);
+        return redirect()->route('tag.index');
     }
 
     /**
@@ -168,7 +169,8 @@ class TagController extends Controller
             'data' => $tag,
             'message' => 'Tag berhasil diupdate'
         ];
-        return response()->json($response, 200);
+        // return response()->json($response, 200);
+        return redirect()->route('tag.index');
     }
 
     /**
@@ -197,6 +199,7 @@ class TagController extends Controller
         ];
 
         // 6. tampilkan hasil
-        return response()->json($response, 200);
+        // return response()->json($response, 200);
+        return redirect()->route('tag.index');
     }
 }

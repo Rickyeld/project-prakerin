@@ -67,6 +67,7 @@ class KategoriController extends Controller
                 'message' => $validator->errors()
             ];
             return response()->json($response, 500);
+            
         }
 
         $kategori = new Kategori;
@@ -79,7 +80,9 @@ class KategoriController extends Controller
             'data' => $kategori,
             'message' => 'Kategori berhasil ditambahkan'
         ];
-        return response()->json($response, 200);
+        // return response()->json($response, 200);
+        return redirect()->route('kategori.index');
+        
     }
 
     /**
@@ -105,6 +108,7 @@ class KategoriController extends Controller
             'message' => 'Kategori berhasil ditemukan'
         ];
         return response()->json($response, 200);
+        // return redirect()->route('kategori.index');
     }
 
     /**
@@ -165,7 +169,8 @@ class KategoriController extends Controller
             'data' => $kategori,
             'message' => 'Kategori berhasil diupdate'
         ];
-        return response()->json($response, 200);
+        // return response()->json($response, 200);
+        return redirect()->route('kategori.index');
     }
 
     /**
@@ -194,6 +199,7 @@ class KategoriController extends Controller
         ];
 
         // 6. tampilkan hasil
-        return response()->json($response, 200);
+        // return response()->json($response, 200);
+        return redirect()->route('kategori.index');
     }
 }

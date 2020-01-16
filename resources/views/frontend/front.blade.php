@@ -3,7 +3,7 @@
     <!-- ##### Hero Area Start ##### -->
     <div class="hero-area owl-carousel">
         <!-- Single Blog Post -->
-        <div class="hero-blog-post bg-img bg-overlay" style="background-image: url(assets/frontend/img/bg-img/1.jpg);">
+        <div class="hero-blog-post bg-img bg-overlay" style="background-image: url(assets/frontend/img/bg-img/back1.png);">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
@@ -13,7 +13,7 @@
                                 <a href="#">{{date('d-m-Y')}}</a>
                                 <a href="{{url('archive')}}">lifestyle</a>
                             </div>
-                            <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
+                            <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Spend your Time in Majalengka</a>
                             </div>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
         </div>
 
         <!-- Single Blog Post -->
-        <div class="hero-blog-post bg-img bg-overlay" style="background-image: url(assets/frontend/img/bg-img/2.jpg);">
+        <div class="hero-blog-post bg-img bg-overlay" style="background-image: url(assets/frontend/img/bg-img/back2.jpg);">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
@@ -31,7 +31,7 @@
                                 <a href="#">{{date('d-m-Y')}}</a>
                                 <a href="{{url('archive')}}">lifestyle</a>
                             </div>
-                            <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
+                            <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Spend your Time in Majalengka</a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
         </div>
 
         <!-- Single Blog Post -->
-        <div class="hero-blog-post bg-img bg-overlay" style="background-image: url(assets/frontend/img/bg-img/3.jpg);">
+        <div class="hero-blog-post bg-img bg-overlay" style="background-image: url(assets/frontend/img/bg-img/back3.jpg);">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
@@ -49,7 +49,7 @@
                                 <a href="#">{{date('d-m-Y')}}</a>
                                 <a href="{{url('archive')}}">lifestyle</a>
                             </div>
-                            <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Party Jokes Startling But Unnecessary</a>
+                            <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms">Spend your Time in Majalengka</a>
                         </div>
                     </div>
                 </div>

@@ -42,7 +42,7 @@
                         <div class="section-heading">
                             <h5>About Us</h5>
                         </div>
-                        <p>Indo Pariwisata adalah portal referensi terpercaya untuk para pecinta pariwisata dan traveller. Selain membahas berbagai tempat yang unik untuk tujuan wisata anda, kami juga memuat informasi wisata di Indonesia tercinta. Eksplore berbagai tempat yang belum pernah anda lihat sebelumnya, pastikan anda menikmati berbagai pesona alam yang ada di belahan dunia, walaupun belum ada kesempatan untuk mengunjunginya secara langsung.</p>
+                        <p>Majalengka Tour adalah portal referensi terpercaya untuk para pecinta pariwisata dan traveller. Selain membahas berbagai tempat yang unik untuk tujuan wisata anda, kami juga memuat informasi wisata di Seputaran Majalengka. Eksplore berbagai tempat yang belum pernah anda lihat sebelumnya, pastikan anda menikmati berbagai pesona alam yang ada di belahan dunia, walaupun belum ada kesempatan untuk mengunjunginya secara langsung.</p>
 
                         <img class="mt-15" src="{{ asset('assets/img/bg-img/35.jpg')}}" alt="">
 
@@ -54,7 +54,7 @@
                         <!-- Single Team Member -->
                         <div class="single-team-member d-flex align-items-center">
                             <div class="team-member-thumbnail">
-                                <img src="{{ asset('../assets/frontend/img/bg-img/39.jpg')}}" alt="">
+                                <img src="{{ asset('../assets/frontend/img/bg-img/person.png')}}" alt="">
                             </div>
                             <div class="team-member-content">
                                 <h6>Muhammad Ricky Eldiansyah</h6>

@@ -105,7 +105,8 @@ class ArtikelController extends Controller
             'data' => $artikel,
             'message' => 'Artikel berhasil ditemukan'
         ];
-        return response()->json($response, 200);
+        // return response()->json($response, 200);
+        return redirect()->route('artikel.index');
     }
 
     /**
@@ -214,7 +215,8 @@ class ArtikelController extends Controller
             'data' => $artikel,
             'message' => 'Tag berhasil ditambahkan'
         ];
-        return response()->json($response, 200);
+        // return response()->json($response, 200);
+        return redirect()->route('artikel.index');
     }
 
     /**
@@ -254,6 +256,7 @@ class ArtikelController extends Controller
         ];
 
         // 6. tampilkan hasil
-        return response()->json($response, 200);
+        // return response()->json($response, 200);
+        return redirect()->route('artikel.index');
     }
 }
